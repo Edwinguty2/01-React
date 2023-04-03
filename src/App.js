@@ -29,6 +29,13 @@ export const CourseList = () => {
     const CourseItem = (index) => {
         if (index !== undefined) {
             setCursos(cursos.filter((_, i) => i !== index)); //el segundo parametro indica la posicion y la filtra de la lista
+        }else{
+
+            const id =document.getElementById("id").value
+            const materia =document.getElementById("nombre").value
+            const descripcion =document.getElementById("descripcion").value
+            setCursos(cursos.concat({id,materia,descripcion}))
+            
         }
     }
     
@@ -77,9 +84,9 @@ export const CourseList = () => {
                 />
                 </label>
             </form> <br></br>
-            <button>Agregar curso</button>
-    </div>            
-
+            <button onClick={ () => CourseItem(undefined)} >Agregar curso</button>
+    </div>
+            
     )
 };
 
