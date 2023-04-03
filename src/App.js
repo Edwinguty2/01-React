@@ -2,17 +2,17 @@ import { useState } from 'react';
 
 export const CourseList = () => {
     let [cursos, setCursos] = useState([{
-        id: "001",
+        id: "1",
         materia: "Calculo diferencial",
         descripcion: "Esta materia de tres creditos desarrolla las habilidades logicas en funciones"
     },
     {
-        id: "002",
+        id: "2",
         materia: "Fisica Mecanica",
         descripcion: "Esta materia de tres creditos fundamenta las leyes de Newton"
     },
     {
-        id: "003",
+        id: "3",
         materia: "Programación orientada a objetos",
         descripcion: "Esta materia de tres creditos desarrolla la habilidad de 'Objetos' en programación"
     }]);
@@ -34,11 +34,22 @@ export const CourseList = () => {
             const id =document.getElementById("id").value
             const materia =document.getElementById("nombre").value
             const descripcion =document.getElementById("descripcion").value
-            setCursos(cursos.concat({id,materia,descripcion}))
+            const idExiste = cursos.some(curso => curso.id === id);// .some se encarga de saber si un elemento existe
             
+            if (idExiste) {
+            alert(`el ID ${id} ya existe`);
+           
+            }else{
+                if(materia===""||descripcion===""|| id===""){
+                    alert(`Complete todos los espacios primero`);
+                }else{
+                    setCursos(cursos.concat({id,materia,descripcion}))
+                }
+                
+            }
         }
     }
-    
+
     return (
 
         <div>
@@ -64,6 +75,7 @@ export const CourseList = () => {
                 <input
                     type="number"
                     id="id"
+                    min="1"
  
                 />
                 </label>
@@ -89,4 +101,6 @@ export const CourseList = () => {
             
     )
 };
+
+
 
