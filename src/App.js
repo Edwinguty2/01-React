@@ -31,7 +31,7 @@ export const CourseList = () => {
             setCursos(cursos.filter((_, i) => i !== index)); //el segundo parametro indica la posicion y la filtra de la lista
         }
     }
-
+    
     return (
 
         <div>
@@ -50,6 +50,36 @@ export const CourseList = () => {
                     {filasTabla}
                 </tbody>
             </table>
-        </div>
+
+            <form >
+                <label>
+                ID:
+                <input
+                    type="number"
+                    id="id"
+ 
+                />
+                </label>
+                <label>
+                Nombre:
+                <input
+                    type="text"
+                    id="nombre"
+                    
+                />
+                </label>
+                <label>
+               Descripción:
+                <input
+                    type="text"
+                    id="descripcion"
+                
+                />
+                </label>
+            </form> <br></br>
+            <button>Agregar curso</button>
+    </div>            
+
     )
 };
+
