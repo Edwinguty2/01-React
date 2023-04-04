@@ -1,42 +1,76 @@
-table {
-	table-layout: fixed;
-	width: 100%;
+* {
+	font-family: sans-serif;
+}
+
+body {
+
+	background: #232526;
+	background: linear-gradient(to right, #414345, #232526);
+	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	color: blanchedalmond;
+	margin: 20px;
+
+}
+
+#tabla {
 	border-collapse: collapse;
-}
-
-thead th:nth-child(1) {
-	width: 30%;
-}
-
-thead th:nth-child(2) {
-	width: 20%;
-}
-
-thead th:nth-child(3) {
-	width: 15%;
-}
-
-thead th:nth-child(4) {
-	width: 35%;
+	width: 100%;
 }
 
 th,
 td {
+	text-align: left;
+	padding: 8px;
+}
+
+form {
+	width: 100%;
+	max-width: 400px;
+	margin: 20px auto;
+	border: 1px solid #ccc;
 	padding: 20px;
+	box-sizing: border-box;
+	border-radius: 10px;
 }
 
-th {
-	letter-spacing: 2px;
+label {
+	font-size: 14px;
+	display: block;
+	margin-bottom: 5px;
 }
 
-td {
-	letter-spacing: 1px;
+input {
+	margin-bottom: 10px;
+	width: 100%;
+	padding: 10px;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	font-size: 14px;
 }
 
-tbody td {
-	text-align: center;
+input:focus {
+	outline: none;
+	border: 1px solid #a51ec4;
 }
 
-tfoot th {
-	text-align: right;
+
+button {
+	background-color: blanchedalmond;
+	color: rgb(0, 0, 0);
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+
+}
+
+#boton-agregar {
+	display: block;
+	margin: 0 auto;
+}
+
+button:hover {
+	background-color: #e9e6cf;
 }
