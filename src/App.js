@@ -97,7 +97,7 @@ export const CourseList = () => {
                         />
                     </label>
                 </form> <br></br>
-                <button onClick={() => CourseItem(undefined)} >Agregar curso</button>
+                <button id="boton-agregar" onClick={() => CourseItem(undefined)} >Agregar curso</button>
             </div>
         </body>
     )
